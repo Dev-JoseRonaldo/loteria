@@ -5,8 +5,8 @@
 
   background-color: var(--background-white);
 
-  top: -650px;
-  right: -1200px;
+  top: -700px;
+  right: -1300px;
   z-index: -1;
 
   clip-path: circle();

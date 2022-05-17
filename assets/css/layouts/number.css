@@ -1,0 +1,16 @@
+.numbers__item {
+  width: 80px;
+  height: 80px;
+  clip-path: circle();
+  background-color: var(--text-white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item__text {
+  font-weight: 700;
+  font-size: 27px;
+  color: var(--text-black);
+}
