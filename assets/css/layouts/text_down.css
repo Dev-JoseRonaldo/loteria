@@ -1,0 +1,13 @@
+.text-dowm__text {
+  color: var(--text-white);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+
+  text-transform: uppercase;
+}
+
+.text__span {
+  font-size: 20px;
+  font-weight: 700;
+}

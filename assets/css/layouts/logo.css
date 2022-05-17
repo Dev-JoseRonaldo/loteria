@@ -1,0 +1,13 @@
+.logo-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 22px;
+}
+
+.logo-center__title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-white);
+}
