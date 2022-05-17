@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+  --background-white: #efefef;
+
+  --mega-sena: #6befa3;
+  --quina: #8666ef;
+  --lotofacil: #dd7ac6;
+  --lotomania: #ffab64;
+  --timemania: #5aad7d;
+  --dia-de-sorte: #bfaf83;
+
+  --text-white: #ffffff;
+  --text-black: #333333;
+
+  --primary-font: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+}
