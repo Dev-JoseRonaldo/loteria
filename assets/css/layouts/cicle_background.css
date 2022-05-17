@@ -1,0 +1,13 @@
+.cicle-background {
+  position: absolute;
+  height: 2200px;
+  width: 2200px;
+
+  background-color: var(--background-white);
+
+  top: -650px;
+  right: -1200px;
+  z-index: -1;
+
+  clip-path: circle();
+}
