@@ -1,4 +1,8 @@
-.text-dowm__text {
+.text-down__text-mobile {
+  display: none;
+}
+
+.text-down__text-desktop {
   color: var(--text-white);
   font-size: 14px;
   font-weight: 500;
@@ -7,7 +11,36 @@
   text-transform: uppercase;
 }
 
-.text__span {
+.text-desktop__span {
   font-size: 20px;
   font-weight: 700;
+}
+
+/* - - - - - Portátil L - - - - - - */
+@media (max-width: 1130px) {
+}
+
+/* - - - - - Portátil - - - - - - - */
+@media (max-width: 1024px) {
+  .text-down__text-desktop {
+    display: none;
+  }
+  .text-down__text-mobile {
+    display: inline-block;
+    color: var(--text-white);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+/* - - - - - Tablet - - - - - - - - */
+@media (max-width: 800px) {
+}
+
+/* - - - - - Mobile Grande - - - -  */
+@media (max-width: 600px) {
+}
+
+/* - - - - - Mobile Pequeno - - - - */
+@media (max-width: 440px) {
 }

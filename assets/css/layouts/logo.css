@@ -11,3 +11,27 @@
   font-weight: 700;
   color: var(--text-white);
 }
+
+/* - - - - - Portátil L - - - - - - */
+@media (max-width: 1130px) {
+}
+
+/* - - - - - Portátil - - - - - - - */
+@media (max-width: 1024px) {
+  .right__logo-center {
+    flex-direction: column;
+    gap: 11px;
+  }
+}
+
+/* - - - - - Tablet - - - - - - - - */
+@media (max-width: 800px) {
+}
+
+/* - - - - - Mobile Grande - - - -  */
+@media (max-width: 600px) {
+}
+
+/* - - - - - Mobile Pequeno - - - - */
+@media (max-width: 440px) {
+}

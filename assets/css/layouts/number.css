@@ -1,3 +1,10 @@
+.left__numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 .numbers__item {
   width: 80px;
   height: 80px;
@@ -13,4 +20,46 @@
   font-weight: 700;
   font-size: 27px;
   color: var(--text-black);
+}
+
+.left__text-left {
+  position: absolute;
+  bottom: 90px;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-black);
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* - - - - - Portátil L - - - - - - */
+@media (max-width: 1130px) {
+}
+
+/* - - - - - Portátil - - - - - - - */
+@media (max-width: 1024px) {
+  .numbers__item {
+    width: 60px;
+    height: 60px;
+  }
+
+  .item__text {
+    font-size: 18px;
+  }
+
+  .left__text-left {
+    bottom: 37px;
+  }
+}
+/* - - - - - Tablet - - - - - - - - */
+@media (max-width: 800px) {
+}
+
+/* - - - - - Mobile Grande - - - -  */
+@media (max-width: 600px) {
+}
+
+/* - - - - - Mobile Pequeno - - - - */
+@media (max-width: 440px) {
 }
