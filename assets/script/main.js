@@ -1,5 +1,5 @@
 const url = 'https://brainn-api-loterias.herokuapp.com/api/v1'
-const id = 440
+
 const select = document.querySelector('.select__sena')
 const numerosbox = document.querySelector('.left__numbers')
 const logo = document.querySelector('.logo-center__title')
@@ -12,6 +12,7 @@ function getLoterias() {
   axios
     .get(`${url}/loterias`)
     .then(response => {
+      console.log(response.data)
       let loterias = response.data
       addLoteriasInSelect(loterias)
     })
@@ -36,8 +37,15 @@ function getSelectValue() {
   selectIndex = select.selectedIndex
 
   getIdConcurso(selectIndex)
+  changeLogo(selectValue)
 }
 
+// função responsável por mudar o nome do logo de acordo com o <select>
+function changeLogo(nameLoteria) {
+  logo.textContent = nameLoteria
+}
+
+// função responsável por obter o ID da loteria selecionada no <select>
 function getIdConcurso(indexIdConcurso) {
   axios
     .get(`${url}/loterias-concursos`)
