@@ -15,7 +15,12 @@
     <main>
       <div class="right">
         <div class="right__select">
-          <select name="sena" class="select__sena"></select>
+          <select
+            name="sena"
+            class="select__sena"
+            onchange="getSelectValue()"
+          ></select>
+
           <svg
             class="sena__row"
             width="11"
@@ -82,17 +87,16 @@
           <div class="numbers__item">
             <p class="item__text">25</p>
           </div>
-
-          <div class="left__text-left">
-            <p>
-              Este sorteio é meramente ilustrativo e não possui nenhuma ligação
-              com a CAIXA.
-            </p>
-          </div>
+        </div>
+        <div class="left__text-left">
+          <p>
+            Este sorteio é meramente ilustrativo e não possui nenhuma ligação
+            com a CAIXA.
+          </p>
         </div>
       </div>
     </main>
 
-    <script src="./assets/script/main.js"></script>
+    <script src="./assets/script/main.js" defer></script>
   </body>
 </html>
