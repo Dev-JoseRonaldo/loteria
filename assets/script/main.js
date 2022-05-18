@@ -33,6 +33,8 @@ function getSelectValue() {
   let selectValue = select.value
   selectIndex = select.selectedIndex
 
+  // esse ternário serve para colocar um valor inicial 0 ao index sempre que a página for recarregada ou aberta
+  selectIndex = selectIndex < 0 ? 0 : selectIndex
   getIdConcurso(selectIndex)
   changeLogo(selectValue)
 }
@@ -95,8 +97,11 @@ function addNumerosSorteados(numeros) {
 
 //função reponsável por chamar as outras funções
 function main() {
+  start()
   getLoterias()
   getSelectValue()
 }
-
+function start() {
+  getSelectValue()
+}
 main()
