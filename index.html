@@ -5,23 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loteria</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <main>
       <div class="right">
         <div class="right__select">
-          <select name="sena" class="select__sena">
-            <option class="sena__item" value="mega-sena">mega-sena</option>
-            <option class="sena__item" value="quina">quina</option>
-            <option class="sena__item" value="lotofacil">lotofacil</option>
-            <option class="sena__item" value="lotomania">lotomania</option>
-            <option class="sena__item" value="timemania">timemania</option>
-            <option class="sena__item" value="mega-sena">mega-sena</option>
-            <option class="sena__item" value="dia-de-sorte">
-              dia de sorte
-            </option>
-          </select>
+          <select name="sena" class="select__sena"></select>
           <svg
             class="sena__row"
             width="11"
@@ -98,5 +92,7 @@
         </div>
       </div>
     </main>
+
+    <script src="./assets/script/main.js"></script>
   </body>
 </html>
