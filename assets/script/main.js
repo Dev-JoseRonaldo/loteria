@@ -1,7 +1,7 @@
 const url = 'https://brainn-api-loterias.herokuapp.com/api/v1'
 
 const select = document.querySelector('.select__sena')
-const numerosbox = document.querySelector('.left__numbers')
+const numerosBox = document.querySelector('.left__numbers')
 const logo = document.querySelector('.logo-center__title')
 const textDesktop = document.querySelector('.text-desktop__span')
 const textMobile = document.querySelector('.text-down__text-mobile')
@@ -33,18 +33,20 @@ function getSelectValue() {
   let selectValue = select.value
   selectIndex = select.selectedIndex
 
+  changeLogo(selectValue, selectIndex)
+
   // esse ternário serve para colocar um valor inicial 0 ao index sempre que a página for recarregada ou aberta
   selectIndex = selectIndex < 0 ? 0 : selectIndex
   getIdConcurso(selectIndex)
-  changeLogo(selectValue)
 }
 
-// função responsável por mudar o nome do logo de acordo com o <select>
-function changeLogo(nameLoteria) {
+// função responsável por mudar o nome da logo de acordo com o <select>
+function changeLogo(nameLoteria, indexIdConcurso) {
   logo.textContent = nameLoteria
+  logo.textContent = indexIdConcurso < 0 ? 'mega-sena' : nameLoteria
 }
 
-// função responsável por mudar o nome do logo de acordo com o <select>
+// função responsável por mudar p texto com informação do id da loteria e a data do sorteio
 function changeIdConcurso(idLoteria, date) {
   textDesktop.textContent = `${idLoteria} - ${date}`
   textMobile.textContent = `concurso N° ${idLoteria}`
@@ -86,9 +88,9 @@ function getNumerosSorteados(id) {
 // função responsável por colocar todos os numeros sorteados (recebidos da api) na <div> que serve de box pra eles
 function addNumerosSorteados(numeros) {
   // esse innerHTML serve para 'apagar' os numeros anteriores.
-  numerosbox.innerHTML = ''
+  numerosBox.innerHTML = ''
   numeros.forEach((e, i) => {
-    numerosbox.innerHTML += `<div class="numbers__item">
+    numerosBox.innerHTML += `<div class="numbers__item">
       <p class="item__text">${numeros[i]}</p>
     </div>
     `
@@ -101,7 +103,9 @@ function main() {
   getLoterias()
   getSelectValue()
 }
+
 function start() {
   getSelectValue()
 }
+
 main()

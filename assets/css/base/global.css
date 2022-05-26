@@ -45,7 +45,7 @@ main {
 
 .left {
   width: 60%;
-  clip-path: ellipse(76% 105% at 77% 51%);
+  clip-path: ellipse(76% 105% at 76% 51%);
 
   background-color: var(--background-white);
   height: 100%;
@@ -69,7 +69,7 @@ main {
 
   .left {
     width: 100%;
-    clip-path: ellipse(100% 67% at 53% 75%);
+    clip-path: ellipse(100% 67% at 50% 68%);
     padding: 0 20px;
   }
 
@@ -85,7 +85,10 @@ main {
 }
 
 /* - - - - - Mobile Grande - - - -  */
-@media (max-width: 600px) {
+@media (max-width: 610px) {
+  .left {
+    clip-path: ellipse(100% 67% at 50% 68%);
+  }
 }
 
 /* - - - - - Mobile Pequeno - - - - */
