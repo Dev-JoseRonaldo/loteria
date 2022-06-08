@@ -89,6 +89,30 @@
   }
 }
 
-/* - - - - - Mobile Pequeno - - - - */
-@media (max-width: 440px) {
+@media (max-width: 510px) {
+  .left {
+    padding: 0 10px;
+  }
+  .left__numbers {
+    margin-bottom: 30px;
+  }
+  .left__text-left {
+    font-size: 10px;
+  }
+
+  .numbers__item {
+    width: 45px;
+    height: 45px;
+  }
+
+  .item__text {
+    font-weight: 700;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 326px) {
+  .left {
+    padding: 0;
+  }
 }

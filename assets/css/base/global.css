@@ -91,6 +91,14 @@ main {
   }
 }
 
+@media (max-width: 510px) {
+  .left {
+    clip-path: ellipse(120% 67% at 50% 68%);
+  }
+}
 /* - - - - - Mobile Pequeno - - - - */
-@media (max-width: 440px) {
+@media (max-width: 410px) {
+  .left {
+    clip-path: ellipse(140% 67% at 50% 68%);
+  }
 }

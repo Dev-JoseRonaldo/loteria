@@ -42,12 +42,13 @@ function getSelectValue() {
   getIdConcurso(selectIndex)
 }
 
-// função responsável por mudar o nome da logo de acordo com o <select>
+// função responsável por mudar o nome da logo de acordo com o <select> selecionado
 function changeLogo(nameLoteria, indexIdConcurso) {
   logo.textContent = nameLoteria
   logo.textContent = indexIdConcurso < 0 ? 'mega-sena' : nameLoteria
 }
 
+//função responsável por mudar o tema de acordo com o <select> selecionado
 function changeColor(nameLoteria) {
   switch (nameLoteria) {
     case 'mega-sena':
@@ -70,6 +71,7 @@ function changeColor(nameLoteria) {
       break
   }
 }
+
 // função responsável por mudar p texto com informação do id da loteria e a data do sorteio
 function changeIdConcurso(idLoteria, date) {
   textDesktop.textContent = `${idLoteria} - ${date}`
