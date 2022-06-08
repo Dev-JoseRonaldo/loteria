@@ -1,5 +1,6 @@
 const url = 'https://brainn-api-loterias.herokuapp.com/api/v1'
 
+const body = document.querySelector('body')
 const select = document.querySelector('.select__sena')
 const numerosBox = document.querySelector('.left__numbers')
 const logo = document.querySelector('.logo-center__title')
@@ -34,6 +35,7 @@ function getSelectValue() {
   selectIndex = select.selectedIndex
 
   changeLogo(selectValue, selectIndex)
+  changeColor(selectValue)
 
   // esse ternário serve para colocar um valor inicial 0 ao index sempre que a página for recarregada ou aberta
   selectIndex = selectIndex < 0 ? 0 : selectIndex
@@ -46,6 +48,28 @@ function changeLogo(nameLoteria, indexIdConcurso) {
   logo.textContent = indexIdConcurso < 0 ? 'mega-sena' : nameLoteria
 }
 
+function changeColor(nameLoteria) {
+  switch (nameLoteria) {
+    case 'mega-sena':
+      body.style.backgroundColor = 'var(--mega-sena)'
+      break
+    case 'quina':
+      body.style.backgroundColor = 'var(--quina)'
+      break
+    case 'lotofácil':
+      body.style.backgroundColor = 'var(--lotofacil)'
+      break
+    case 'lotomania':
+      body.style.backgroundColor = 'var(--lotomania)'
+      break
+    case 'timemania':
+      body.style.backgroundColor = 'var(--timemania)'
+      break
+    case 'dia de sorte':
+      body.style.backgroundColor = 'var(--dia-de-sorte)'
+      break
+  }
+}
 // função responsável por mudar p texto com informação do id da loteria e a data do sorteio
 function changeIdConcurso(idLoteria, date) {
   textDesktop.textContent = `${idLoteria} - ${date}`
